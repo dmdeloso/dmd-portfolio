@@ -1,258 +1,229 @@
 :root{
-    --hed-font: 'Heebo', sans-serif;
-    --text-font: 'Arvo', serif;;
-    --theme-color: #e35b00;
+    --hed-font: sans-serif;
 }
-h1,h2,h3{
-    /* color: whitesmoke; */
-    font-family: var(--hed-font);
+body{
+    background-color: #081640;
+    color: #F2F0CE;
+    font-family: p22-underground, sans-serif;
+    font-style: normal;
 }
-h3{
-    font-weight: 300;
+a{
+    color: #F2F0CE;
+    transition: color .2s linear;
+}
+a:hover{
+    color: #7d9eff;
 }
 p{
-    font-family: var(--text-font);
-    font-size: 1.3em;
-}
 
-.color-emphasis{
-    color: var(--theme-color);
-    /* font-weight: 800; */
 }
-.bio-top{
-    width: 40%;
-    margin: 5% auto auto auto;
-    /* text-align: center; */
+strong{
+    font-weight: 500;
 }
-.bio-top-name{
-    /* text-align: center; */
-    font-size: 2em;
-}
-.bio-links{
-    display: flex;
-    width: 50%;
+.site-top{
+    width: 80%;
     margin: auto;
-    justify-content: space-around;
 }
-.bio-profile-pic{
-    /* float: left; */
-    width: 10vw;
-    height: 10vw;
-    background-image: url('img/profile-pic.jpg');
-    background-size: cover;
-    margin: auto;
-    border-radius: 50%;
-    border: 5px solid var(--theme-color);
-    box-shadow: 2px 2px 2px rgba(68, 68, 68, 0.6);
-}
-.bio-button{
-    height: 2em;
-    padding: .5em;
-  background-color: white;
-  border: 1px solid black;
-  box-shadow: 1px 1px #89a1b3;
-  transition-property: transform, background-color;
-  transition-duration: .5s;
-  font-family: 'Arvo', serif;
-  border-radius: 5px;
-  text-align: center;
-}
-.bio-button-link{
-    text-decoration: none;
-    transition: color 1s ease;
-    color: black;
-}
-.bio-button-link:hover{
-    text-decoration: underline;
-    color: var(--theme-color);
+.site-name{
     
-}
-.work-project{
-    margin-bottom: 4em;
-    border: 1px solid gray;
-    box-shadow: 2px 2px 2px rgba(68, 68, 68, 0.6);
-    border-radius: 10px;
-    padding: 1em 0 2em 1em;
-}
-.work-section{
-    width: 70%;
-    margin: auto;
-}
-.work-heading{
-    text-align: center;
-    font-size: 3.5em;
-    margin-bottom: 0;
-}
-.work-subtitle{
-    text-align: center;
-    margin: 0 0 2em 0;
-}
-.project-title{
-    font-size: 2em;
-    margin-bottom: 0;
-}
-.project-thumb{
-    background-position: center;
-    background-size: cover;
-    margin-top: 1em;
-    width: 20vw;
-    height: 40vh;
-    margin-right: 1em;
-    /* border: 1px solid black; */
-    box-shadow: 2px 2px 2px rgba(68, 68, 68, 0.6);
-    float: left;
-}
-.project-description{
-    margin-top: .5em;
-    width: 90%;
-}
-.project-link{
-    text-align: center;
-    transition: color 1s ease;
-    color: black;
-    /* text-decoration: none; */
-}
-.project-link:hover{
-    /* text-decoration: underline; */
-    color: var(--theme-color);
-    
-}
-.project-button{
-    display: inline;
-    height: 2em;
-    /* padding: .5em;
-  background-color: white;
-  border: 1px solid black;
-  box-shadow: 1px 1px #89a1b3; */
-  transition-property: transform, background-color;
-  transition-duration: .5s;
-  font-family: 'Arvo', serif;
-  border-radius: 5px;
-  /* width: fit-content; */
-  font-weight: 800;
-  text-align: left;
-  /* margin: auto; */
-  /* box-shadow: 2px 2px 2px rgba(68, 68, 68, 0.6); */
-}
-.site-footer{
-    text-align: center;
-}
-i{
-    display: inline;
-    margin-left: .5em;
-}
+    font-weight: 500;
+   
 
-/* ABOUT ME */
-.about-head{
-    padding-top: 5vh;
-    font-size: 3em;
+    text-align: center;
     margin-bottom: 0;
 }
-.about-subhed{
+.site-subtitle{
+    font-weight: 100;
+    text-align: center;
     margin-top: 0;
-}
-.aboutme-text{
-    height: fit-content;
-    width: 40%;
-    margin: auto;
-}
-.profile-pic-big{
-    float: right;
-    width: 20vw;
-    margin: 1em;
-}
-.about-me-contact h1{
-    text-align: center;
+    width: 50%;
+    margin: 0 auto 1em auto;
 }
 .social-links{
-    width: 40%;
+    width: 60%;
+    margin: 1em auto;
+    display: flex;
+    list-style-type: none;
+    justify-content: space-evenly;
+}
+.social-link-anchor{
+    display: flex;
+    align-items: center;
+    font-weight: 100;
+}
+a:hover{
+    color: #7d9eff;
+}
+.social-link-anchor:hover svg, .project-link:hover svg{
+    stroke: #7d9eff;
+}
+.social-link-anchor svg{
+    transition: stroke .2s linear;
+    margin-right: .25em;
+    stroke: #F2F0CE;
+}
+.social-link-anchor h2{
+    font-weight: 100;
+    font-size: 1.3em;
+}
+.site-bio{
+    width: 50%;
+    border-top: 1px solid #F2F0CE;
+    border-bottom: 1px solid #F2F0CE;
+    padding: 1em 0;
+    margin: 0 auto;
+    font-weight: 100;
+    font-size: 1.3em;
+    /* margin-bottom: 0; */
+    display: flex;
+    height: fit-content;
+}
+.bio-text{
+    margin-top: 0;
+}
+.resume-link{
+    text-decoration: none;
+}
+.resume-button{
+    padding: 1em;
+    border: 1px solid #F2F0CE;
+    width: fit-content;
+    margin: auto;
+    /* width: 10%; */
+    text-align: center;
+    transition: all .2s linear;
+}
+.resume-button:hover{
+    background-color: #F2F0CE;
+    color: #081640;
+}
+.profile-pic-rect{
+    width: 30%;
+    object-fit: contain;
+    margin-right: 2.5%;
+    max-height: 15em;
+}
+.profile-pic-square{
+    display: none;
+}
+
+.my-work{
+    width: 60%;
     margin: auto;
 }
-
-.social-list{
-    padding: 0;
-    font-family: var(--text-font);
-    display: flex;
-    width: 100%;
-    justify-content: space-around;
+.section-header{
+    font-weight: 500;
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 0;
 }
-.social-item a{
-    color: black;
-  }
-  .social-item i{
-      margin-right: .5em;
-      margin-bottom: .5em;
-  }
-  .social-item{
-      margin-right: 1em;
-      text-align: center;
-    display: inline;
-    /* font-family: 'Arvo', serif; */
-    transition-property: transform, color;
-    transition-duration: .4s;
-  }
-  .social-item a{
-    text-decoration: none
-  }
-  .social-item:hover{
-      text-decoration: underline;
-  }
-  .project-navbar{
-    position: fixed;
-    height: 3em;
-    box-shadow: 2px 2px 2px rgba(68, 68, 68, 0.6);
-    /* display: fixed; */
-    background-color: white;
-    padding-bottom: 1em;
-    left: 0;
+.section-subhed{
+    margin-top: 0;
+    font-weight: 100;
+    text-align: center;
+    margin-bottom: 1em;
+}
+.work-project{
+    border-bottom: 1px solid #F2F0CE;
+    width: 90%;
+    margin: auto auto 2em auto;
+    padding: 2em 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    
+}
+.project-text{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    margin-right: 5%;
+}
+.project-link{
+    display: flex;
+    align-items: center;
+}
+
+
+.project-year{
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: 100;
+}
+.project-title{
+    /* width: 40%; */
+    font-size: 2em;
+    display: inline-block;
+    margin-top: 0;
+    margin-bottom: .5em;
+}
+.project-description{
+    font-weight: 100;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 1.3em;
+    /* display: inline-block; */
+}
+.project-thumb{
+    /* border-radius: 5px; */
+    width: 50%;
+    /* float: right; */
+    /* position: absolute; */
     right: 0;
     top: 0;
-    padding-left: 1em;
-    z-index: 10;
-  }
-  .returnlink{
-    color: black;
-    text-decoration: none;
-    transition: color .5s;
-  }
-  .returnlink:hover{
-    color: var(--theme-color);
-  }
-
-@media screen and (max-width: 900px){
-    .work-section{
-        width: 98%;
-    }
-    .bio-top-name{
-        text-align: center;
-    }
-    .bio-profile-pic{
+    /* display: inline; */
+    /* border: 8px solid #F2F0CE; */
+    /* box-shadow: 2px 2px 2px; */
+}
+.project-thumb-mobile{
+    display: none;
+}
+.copyright-section{
+    text-align: center;
+}
+@media screen and (max-width: 1366px){
+    .social-text{
         display: none;
     }
-    .bio-links{
-        width: 80%;
+}
+@media screen and (max-width: 1000px){
+    .site-top{
+        width: 90%;
+    }
+    .site-bio{
+        width: 90%;
+        display: block;
+    }
+    .profile-pic-rect{
+        display: none;
+        
+    }
+    .profile-pic-square{
+        display: block;
+        width: 50%;
+        margin: auto auto 1em auto;
+        object-fit: contain;
+    }
+    .my-work{
+        width: 90%;
+    }
+    .project-description{
+    }
+    .project-text{
+        width: 100%;
+    }
+    .work-project{
+        display: block;
     }
     .project-thumb{
+        display: none;
+    }
+    .project-thumb-mobile{
+        display: block;
+        width: 100%;
+        margin-bottom: 1em;
+    }
+    .site-subtitle{
         width: 90%;
-        margin: auto;
-        float: none;
-    }
-    .social-item{
-        margin: auto;
-    }
-    .social-links{
-        width: unset;
-    }
-    .social-list{
-        flex-direction: column;
-        justify-content: baseline;
-        width: 90vw;
-        margin: 0;
-    }
-    .aboutme-text{
-        width: 80%;
-    }
-    .bio-top{
-    width: 90%;
     }
 }
