@@ -83,6 +83,9 @@ a:hover{
 }
 .resume-link{
     text-decoration: none;
+    display: block;
+    width: 8em;
+    margin: auto;
 }
 .resume-button{
     padding: 1em;
@@ -91,9 +94,9 @@ a:hover{
     margin: auto;
     /* width: 10%; */
     text-align: center;
-    transition: all .2s linear;
+    transition: color .2s linear, background-color .2s linear;
 }
-.resume-button:hover{
+.resume-link:hover .resume-button{
     background-color: #F2F0CE;
     color: #081640;
 }
