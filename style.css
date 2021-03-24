@@ -80,6 +80,7 @@ a:hover{
 }
 .bio-text{
     margin-top: 0;
+    font-weight: 300;
 }
 .resume-link{
     text-decoration: none;
