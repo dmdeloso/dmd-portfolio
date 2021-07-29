@@ -14,9 +14,6 @@ a{
 a:hover{
     color: #7d9eff;
 }
-p{
-
-}
 strong{
     font-weight: 500;
 }
@@ -33,7 +30,7 @@ strong{
     margin-bottom: 0;
 }
 .site-subtitle{
-    font-weight: 100;
+    font-weight: 300;
     text-align: center;
     margin-top: 0;
     width: 50%;
@@ -49,7 +46,7 @@ strong{
 .social-link-anchor{
     display: flex;
     align-items: center;
-    font-weight: 100;
+    font-weight: 400;
 }
 a:hover{
     color: #7d9eff;
@@ -63,7 +60,7 @@ a:hover{
     stroke: #F2F0CE;
 }
 .social-link-anchor h2{
-    font-weight: 100;
+    font-weight: 300;
     font-size: 1.3em;
 }
 .site-bio{
@@ -72,7 +69,7 @@ a:hover{
     border-bottom: 1px solid #F2F0CE;
     padding: 1em 0;
     margin: 0 auto;
-    font-weight: 100;
+    font-weight: 300;
     font-size: 1.3em;
     /* margin-bottom: 0; */
     display: flex;
@@ -123,7 +120,7 @@ a:hover{
 }
 .section-subhed{
     margin-top: 0;
-    font-weight: 100;
+    font-weight: 300;
     text-align: center;
     margin-bottom: 1em;
 }
@@ -146,13 +143,16 @@ a:hover{
 .project-link{
     display: flex;
     align-items: center;
+    /* flex-shrink: 0; */
+    flex-wrap: nowrap;
+    width: 100%;
 }
 
 
 .project-year{
     margin-top: 0;
     margin-bottom: 0;
-    font-weight: 100;
+    font-weight: 300;
 }
 .project-title{
     /* width: 40%; */
@@ -162,7 +162,7 @@ a:hover{
     margin-bottom: .5em;
 }
 .project-description{
-    font-weight: 100;
+    font-weight: 300;
     margin-top: 0;
     margin-bottom: 0;
     font-size: 1.3em;
