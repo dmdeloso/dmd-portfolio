@@ -168,9 +168,12 @@ a:hover{
     font-size: 1.3em;
     /* display: inline-block; */
 }
+.project-thumb-link{
+    width: 50%;
+}
 .project-thumb{
     /* border-radius: 5px; */
-    width: 50%;
+    width: 100%;
     /* float: right; */
     /* position: absolute; */
     right: 0;
