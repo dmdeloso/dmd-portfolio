@@ -17,89 +17,57 @@ a:hover{
 strong{
     font-weight: 500;
 }
-.site-top{
-    width: 80%;
-    margin: auto;
-}
-.site-name{
-    
-    font-weight: 500;
-   
-
-    text-align: center;
-    margin-bottom: 0;
-}
-.site-subtitle{
-    font-weight: 300;
-    text-align: center;
-    margin-top: 0;
-    width: 50%;
-    margin: 0 auto 1em auto;
-}
-.social-links{
-    width: 60%;
-    margin: 1em auto;
-    display: flex;
-    list-style-type: none;
-    justify-content: space-evenly;
-}
-.social-link-anchor{
-    display: flex;
-    align-items: center;
-    font-weight: 400;
-}
-a:hover{
-    color: #7d9eff;
-}
-.social-link-anchor:hover svg, .project-link:hover svg{
-    stroke: #7d9eff;
-}
-.social-link-anchor svg{
-    transition: stroke .2s linear;
-    margin-right: .25em;
-    stroke: #F2F0CE;
-}
-.social-link-anchor h2{
-    font-weight: 300;
-    font-size: 1.3em;
-}
-.site-bio{
-    width: 50%;
-    border-top: 1px solid #F2F0CE;
-    border-bottom: 1px solid #F2F0CE;
-    padding: 1em 0;
-    margin: 0 auto;
-    font-weight: 300;
-    font-size: 1.3em;
-    /* margin-bottom: 0; */
-    display: flex;
-    height: fit-content;
-}
-.bio-text{
-    margin-top: 0;
-    font-weight: 300;
-}
-.resume-link{
-    text-decoration: none;
-    display: block;
-    width: 8em;
-    margin: auto;
-}
-.resume-button{
-    padding: 1em;
-    border: 1px solid #F2F0CE;
+header{
     width: fit-content;
     margin: auto;
-    /* width: 10%; */
-    text-align: center;
-    transition: color .2s linear, background-color .2s linear;
+    text-align: right;
+    position: relative;
 }
-.resume-link:hover .resume-button{
-    background-color: #F2F0CE;
-    color: #081640;
+@keyframes fade-right{
+    from{
+        opacity: 0;
+        right: 2vw;
+    }
+    to{
+        opacity: 1;
+        right: 0;
+    }
+}
+@keyframes fade-left{
+    from{
+        opacity: 0;
+        right: 3vw;
+    }
+    to{
+        opacity: 1;
+        right: 5vw;
+    }
+}
+.header-content{
+    opacity: 0;
+    position: relative;
+    z-index: 10;
+    bottom: 3vh;
+    right: 5vw;
+    background-color: white;
+    padding: 0 1rem;
+    color: black;
+    animation: fade-left .75s ease-in-out .3s forwards;
+
+}
+.header-content h1{
+    font-size: 1.5rem;
+}
+.header-content h2{
+    font-size: 1.2rem;
 }
 .profile-pic-rect{
-    width: 30%;
+    opacity: 0;
+    animation: fade-right .75s ease-in-out .25s forwards;
+    /* width: 30%; */
+    position: relative;
+    top: 5vh;
+    z-index: 0;
     object-fit: contain;
     margin-right: 2.5%;
     max-height: 15em;
@@ -107,10 +75,37 @@ a:hover{
 .profile-pic-square{
     display: none;
 }
+.bio-text{
+    position: absolute;
+    width: 30%;
+    left: 2.5vw;
+    top: 5vh;
+}
+.bio-text p{
+    font-size: 1rem;
+}
+.bio-text h3{
+    margin: 0;
+    font-size: 1.5rem;
+}
+header h1{
+    
+    font-weight: 500;
+   
+
+    margin-bottom: 0;
+}
+header h2{
+    font-weight: 300;
+    margin: 0;
+}
 
 .my-work{
-    width: 60%;
+    width: 90%;
+    display: flex;
     margin: auto;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 .section-header{
     font-weight: 500;
@@ -125,27 +120,39 @@ a:hover{
     margin-bottom: 1em;
 }
 .work-project{
-    border-bottom: 1px solid #F2F0CE;
-    width: 90%;
-    margin: auto auto 2em auto;
-    padding: 2em 0;
-    position: relative;
-    display: flex;
-    align-items: center;
+    width: 15vw;
+    height: 8.43vw;
+    margin: 1rem;
     
 }
+.work-project:hover .project-text, .work-project:active .project-text{
+   opacity: 1;
+}
+.work-project:hover .project-thumb{
+    transform: scale(1.1);
+}
 .project-text{
-    width: 50%;
+    width: 30%;
+    z-index: 100;
+    background-color: black;
+    color: white;
+    padding: 1rem;
     display: flex;
     flex-direction: column;
-    margin-right: 5%;
+    position: absolute;
+    top: 5vh;
+    opacity: 0;
+    transition-delay: .2s;
+    transition: opacity .25s ease-in-out;
+    text-align: right;
+    right: 5vw;
 }
+.work-tip{
+    text-align: center;
+}
+
 .project-link{
-    display: flex;
-    align-items: center;
-    /* flex-shrink: 0; */
-    flex-wrap: nowrap;
-    width: 100%;
+display: none;
 }
 
 
@@ -156,7 +163,7 @@ a:hover{
 }
 .project-title{
     /* width: 40%; */
-    font-size: 2em;
+    font-size: 1.5em;
     display: inline-block;
     margin-top: 0;
     margin-bottom: .5em;
@@ -165,15 +172,19 @@ a:hover{
     font-weight: 300;
     margin-top: 0;
     margin-bottom: 0;
-    font-size: 1.3em;
+    font-size: 1.2em;
     /* display: inline-block; */
 }
 .project-thumb-link{
-    width: 50%;
+    width: 100%;
 }
 .project-thumb{
+    transform: scale(1);
+    transition: transform .5s ease-in-out;
     /* border-radius: 5px; */
     width: 100%;
+    height: 100%;
+    object-fit: cover;
     /* float: right; */
     /* position: absolute; */
     right: 0;
@@ -185,45 +196,47 @@ a:hover{
 .project-thumb-mobile{
     display: none;
 }
-.copyright-section{
-    text-align: center;
-}
-@media screen and (max-width: 1366px){
-    .social-text{
-        display: none;
-    }
-}
+
 @media screen and (max-width: 1000px){
-    .site-top{
-        width: 90%;
-    }
-    .site-bio{
-        width: 90%;
-        display: block;
-    }
-    .profile-pic-rect{
+
+    .bio-text{
         display: none;
-        
     }
-    .profile-pic-square{
-        display: block;
-        width: 50%;
-        margin: auto auto 1em auto;
-        object-fit: contain;
-    }
+ 
     .my-work{
         width: 90%;
     }
-    .project-description{
-    }
-    .project-text{
+    .project-link{
+        display: flex;
+        align-items: center;
+        /* flex-shrink: 0; */
+        flex-wrap: nowrap;
         width: 100%;
     }
+    .project-text{
+        width: 90%;
+        margin: auto;
+        position: static;
+        opacity: 1;
+        animation: none;
+        background-color: unset;
+        text-align: left;
+
+    }
+    .work-tip{
+        display: none;
+    }
     .work-project{
-        display: block;
+        display: flex;
+        flex-direction: column;
+        width: 45%;
+        height: fit-content;
     }
     .project-thumb{
         display: none;
+    }
+    .project-description{
+        font-size: 1rem;
     }
     .project-thumb-mobile{
         display: block;
@@ -232,5 +245,27 @@ a:hover{
     }
     .site-subtitle{
         width: 90%;
+    }
+}
+@media screen and (max-width: 500px) {
+    .work-project{
+        width: 100%;
+    }
+    header{
+        width: 90%;
+    }
+    .profile-pic-rect{
+        display: none;
+        
+    }
+    .profile-pic-square{
+        position: relative;
+        left: 10%;
+        opacity: 0;
+        animation: fade-right .75s ease-in-out .25s forwards;
+        display: block;
+        width: 50%;
+        margin: auto auto 1em auto;
+        object-fit: contain;
     }
 }
