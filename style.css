@@ -200,7 +200,12 @@ display: none;
 @media screen and (max-width: 1000px){
 
     .bio-text{
-        display: none;
+        /* display: none; */
+        position: relative;
+        width: 90%;
+        margin: 1rem auto;
+        top: 0;
+        left: 0;
     }
  
     .my-work{
